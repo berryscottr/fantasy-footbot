@@ -66,9 +66,9 @@ func (bot Data) HandleReaction(s *discordgo.Session, r *discordgo.MessageReactio
 // HandleFoot for posting foot
 func (bot Data) HandleFoot(s *discordgo.Session, m *discordgo.MessageCreate) {
 	log.Info().Msg("handling football message")
-	name := r.Member.Nick
+	name := m.Member.Nick
 	if name == "" {
-		name = r.Member.User.Username
+		name = m.Member.User.Username
 	}
 	message := discordgo.MessageSend{
 		Content: fmt.Sprintf(

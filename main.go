@@ -1,7 +1,7 @@
 package main
 
 import (
-	"magic-8ball/pkg/bot"
+	"fantasy-footbot/pkg/bot"
 	"os"
 )
 
