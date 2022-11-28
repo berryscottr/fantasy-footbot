@@ -8,7 +8,7 @@ const (
 	// UserID assigns ID to the bot
 	UserID = "@me"
 	// FantasyFootbotChannelID is the ID of channel #fantasy-footbot
-	FantasyFootbotChannelID = "955291440643207228"
+	FantasyFootbotChannelID = "1046790528680853524"
 )
 
 var (
