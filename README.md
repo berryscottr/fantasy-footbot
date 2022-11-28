@@ -4,6 +4,8 @@ Fantasy football bot for the Old Balls
 [![Go 1.19](https://img.shields.io/badge/golang-1.19-green.svg)](https://go.dev/dl/)
 [![Build Fantasy Footbot](https://github.com/berryscottr/fantasy-footbot/actions/workflows/build.yml/badge.svg?event=workflow_run)](https://github.com/berryscottr/fantasy-footbot/actions/workflows/build.yml)
 
+![Done](data/images/done.gif)
+
 ## Commands
 ### Foot
 `!foot`
