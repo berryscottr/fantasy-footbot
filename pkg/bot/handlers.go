@@ -25,7 +25,8 @@ func (bot Data) ReactionHandler(s *discordgo.Session, r *discordgo.MessageReacti
 		return
 	}
 	if slices.Contains(Reactions, r.MessageReaction.Emoji.Name) &&
-		r.MessageReaction.ChannelID == FantasyFootbotChannelID {
+		(r.MessageReaction.ChannelID == FantasyFootbotChannelID ||
+		r.MessageReaction.ChannelID == DevChannelID) {
 		bot.HandleReaction(s, r)
 	}
 	return
@@ -78,6 +79,8 @@ func (bot Data) HandleFoot(s *discordgo.Session, m *discordgo.MessageCreate) {
 	}
 	if m.ChannelID == FantasyFootbotChannelID {
 		_, bot.Err = s.ChannelMessageSendComplex(FantasyFootbotChannelID, &message)
+	} else if m.ChannelID == DevChannelID {
+		_, bot.Err = s.ChannelMessageSendComplex(DevChannelID, &message)
 	}
 	if bot.Err != nil {
 		log.Err(bot.Err).Msg("failed to post message")
