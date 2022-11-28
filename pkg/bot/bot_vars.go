@@ -9,6 +9,8 @@ const (
 	UserID = "@me"
 	// FantasyFootbotChannelID is the ID of channel #fantasy-footbot
 	FantasyFootbotChannelID = "1046790528680853524"
+	// DevChannelID is the ID of channel #testing-channel
+	FantasyFootbotChannelID = "1046869651235283014"
 )
 
 var (
