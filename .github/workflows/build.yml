@@ -1,7 +1,7 @@
 name: Build Fantasy Footbot
 on:
-  schedule:
-    - cron: "0 */6 * * *"
+#  schedule:
+#    - cron: "0 */6 * * *"
   workflow_dispatch:
 env:
   BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
@@ -30,6 +30,6 @@ jobs:
         run: docker tag fantasy-footbot:latest docker.pkg.github.com/berryscottr/fantasy-footbot/fantasy-footbot:latest
       - name: Push the Docker image
         run: docker push docker.pkg.github.com/berryscottr/fantasy-footbot/fantasy-footbot:latest
-      - name: Run the Docker image
-        run: docker run docker.pkg.github.com/berryscottr/fantasy-footbot/fantasy-footbot:latest
-      - uses: gautamkrishnar/keepalive-workflow@v1
+#      - name: Run the Docker image
+#        run: docker run docker.pkg.github.com/berryscottr/fantasy-footbot/fantasy-footbot:latest
+#      - uses: gautamkrishnar/keepalive-workflow@v1
